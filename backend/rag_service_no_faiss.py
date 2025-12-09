@@ -28,7 +28,7 @@ LM_MODEL_NAME = "gemma-3-12b-it"   # change if needed
 
 TOP_K_DEFAULT = 3
 MAX_CONTEXT_CHARS = 15000
-REQUEST_TIMEOUT = 60  # seconds
+REQUEST_TIMEOUT = 120  # seconds
 
 # -------- Logging --------
 logging.basicConfig(level=logging.INFO)

@@ -6,7 +6,7 @@ import html
 
 # -------- Configuration --------
 RAG_BACKEND = os.getenv("RAG_BACKEND_URL", "http://localhost:8000/ask")
-TIMEOUT = 60
+TIMEOUT = 120
 
 st.set_page_config(page_title="AI Syllabus Tutor", layout="wide", initial_sidebar_state="collapsed")
 
@@ -106,8 +106,9 @@ if submit:
                 st.markdown("### ✅ Answer")
                 with st.container():
                     # Create a styled answer box with proper HTML escaping
-                    escaped_answer = html.escape(answer).replace('\n', '<br>')
-                    st.markdown(f'<div class="answer-box">{escaped_answer}</div>', unsafe_allow_html=True)
+                    st.markdown(answer)
+                    #escaped_answer = html.escape(answer).replace('\n', '<br>')
+                    #st.markdown(f'<div class="answer-box">{escaped_answer}</div>', unsafe_allow_html=True)
                 
                 # Metadata
                 col1, col2 = st.columns(2)
